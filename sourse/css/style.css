@@ -1,0 +1,227 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Prata&family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0
+}
+
+*,
+:after,
+:before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+:active,
+:focus {
+    outline: none
+}
+
+a:active,
+a:focus {
+    outline: none
+}
+
+aside,
+footer,
+header,
+nav {
+    display: block
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+button,
+input,
+textarea {
+    font-family: inherit
+}
+
+input::-ms-clear {
+    display: none
+}
+
+button {
+    cursor: pointer
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
+a,
+a:visited {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+ul li {
+    list-style: none
+}
+
+img {
+    vertical-align: top
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit
+}
+
+.header__row .header__logo .header__title {
+    font-family: "Playfair Display", serif;
+    font-size: 12px;
+    letter-spacing: 0.14em
+}
+
+.main {
+    font-family: "Roboto", sans-serif
+}
+
+.main .container {
+    max-width: 1171px;
+    margin: 0 auto
+}
+
+.header__content {
+    padding-top: 36px
+}
+
+.header__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.header__row .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.header__row .header__logo .header__title {
+    color: #555248;
+    line-height: 16px
+}
+
+.header__row .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 65px
+}
+
+.header__row .header__menu .header__menu-elem {
+    line-height: 16px
+}
+
+.header__row .header__menu a {
+    color: #555248
+}
+
+.header__row .header__icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 23px
+}
+
+.header__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    z-index: 1
+}
+
+.header__body .header__description {
+    z-index: 1;
+    margin-left: 185px
+}
+
+.header__body .header__description .header__descroption_title {
+    margin: 285px 0 16px -62px;
+    font-family: "Playfair Display", serif;
+    font-size: 45px;
+    line-height: 60px;
+    color: #1B1A17
+}
+
+.header__body .header__description img {
+    vertical-align: middle
+}
+
+.header__body .header__description .header__descroption_subtitle {
+    padding-bottom: 39px;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    line-height: 40px;
+    color: #1B1A17
+}
+
+.header__body .header__description .header__descroption_subtitle .header__descroption_text {
+    padding-bottom: 64px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(27, 26, 23, 0.82)
+}
+
+.header__body .header__description .header__descroption_subtitle .header__descroption_text .header__descroption_btn {
+    margin-bottom: 187px;
+    padding: 27px 38px;
+    background: #444240;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase
+}
+
+.header__body .header__cover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#EAE3D4));
+    background: -webkit-linear-gradient(top, #FFFFFF 0%, #EAE3D4 100%);
+    background: -o-linear-gradient(top, #FFFFFF 0%, #EAE3D4 100%);
+    background: linear-gradient(180deg, #FFFFFF 0%, #EAE3D4 100%);
+    border-radius: 50%;
+    background-size: 496px 944px;
+    margin-left: -76px;
+    min-height: 944px;
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    min-width: 494px
+}
+
+.header__body .header__cover .header__cover_image img {
+    position: absolute;
+    margin-right: 60px
+}

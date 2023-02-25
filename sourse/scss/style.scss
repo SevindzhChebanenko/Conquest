@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Prata&family=Roboto:wght@300;400;500;700&display=swap');
+
+@import "nullstyle.scss";
+
+//Переменные
+$ffPD: 'Playfair Display', serif;
+$ffP: 'Prata', serif;
+$ffR: 'Roboto', sans-serif;
+
+$fs12: 12px;
+$fs14: 14px;
+$fs16: 16px;
+$fs32: 32px;
+
+$cgr: #555248;
+$ctext: #1B1A17;
+$crgba: rgba(27, 26, 23, 0.82);
+$cbg: #444240;
+
+
+//Шаблоны
+%logo {
+    font-family: $ffPD;
+    font-size: $fs12;   
+    letter-spacing: 0.14em;
+}
+
+
+//Container
+
+.main {
+    font-family: $ffR;
+    .container {
+        max-width: 1171px;
+        margin: 0 auto;
+    }
+}
+
+//Header
+
+.header__content {
+    padding-top: 36px;
+}
+.header__row {
+    display: flex;
+    justify-content: space-between;
+    .header__logo {
+        display: flex;
+        gap: 3px;
+        align-items: center;
+        .header__title {
+            @extend %logo;
+            color: $cgr;
+            line-height: 16px;
+        }
+    }
+    .header__menu {
+        display: flex;
+        gap: 65px;
+        .header__menu-elem {
+            line-height: 16px;
+        }
+        & a {
+            color: $cgr;
+        }
+        }
+    .header__icons {
+        display: flex;
+        gap: 23px;
+    }
+}
+
+.header__body {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    .header__description {
+        z-index: 1;
+        margin-left: 185px;
+        .header__descroption_title {
+            margin: 285px 0 16px -62px;
+            font-family: $ffPD;
+            font-size: 45px;
+            line-height: 60px;
+            color: $ctext;
+        }
+        & img {
+            vertical-align: middle;
+        }
+        .header__descroption_subtitle {
+            padding-bottom: 39px;
+            font-family: $ffPD;
+            font-size: 30px;
+            line-height: 40px;
+            color: $ctext;
+        .header__descroption_text {
+            padding-bottom: 64px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 21px;
+            color:$crgba;
+        .header__descroption_btn {
+            margin-bottom: 187px;
+            padding: 27px 38px;
+            background:$cbg;
+            color:#fff;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        }
+        }
+    }
+    .header__cover {
+        // position: absolute;
+        background: linear-gradient(180deg, #FFFFFF 0%, #EAE3D4 100%);
+        border-radius: 50%;
+        background-size: 496px 944px;
+        margin-left: -76px;
+        min-height: 944px;
+        border-radius:100% 0 0 100% / 50% 0 0 50%;
+        min-width: 494px;
+        // background-position: left -134px bottom 76px;
+        .header__cover_image img{
+            position: absolute;
+            margin-right: 60px;
+        }
+        .cover__footnote-elem1 {
+        }
+        .cover__footnote-elem2 {
+        }
+    }
+}
