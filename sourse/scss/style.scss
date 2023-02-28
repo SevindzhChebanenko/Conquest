@@ -154,11 +154,8 @@ $fw700: 700;
                 line-height: 20px;
             }
             @media (max-width: 992px) {
+                margin: 266px 0 16px 0px !important;
                 font-size: 25px;
-                line-height: 15px;
-            }
-            @media (max-width: 776px) {
-                font-size: 20px;
                 line-height: 15px;
             }
         }
@@ -351,9 +348,15 @@ $fw700: 700;
     background-image:url(../../img/banner/background_banner.svg);
     background-repeat: no-repeat;
     min-width: 698px;
-}
+
+    @media (max-width: 1200px) {
+        max-width: 698px;
+    }
 .banner__image > img {
     padding: 52px 0 53px 177px;
+
+    @media (max-width: 1200px) {
+
 }
 .banner__number {
     margin-top: -32px;
@@ -369,6 +372,11 @@ $fw700: 700;
 }
 .banner__description {
     margin: 140px 171px 0 69px;
+
+    @media (max-width: 1200px) {
+        margin: 140px 171px 0 25px;
+        min-width: 485px;
+    }
     .banner__title {
         font-family: $ffPD;
         font-size: $fs32;
