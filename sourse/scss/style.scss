@@ -606,7 +606,9 @@ $fw700: 700;
             }
 
         & a img {
+        @media (max-width: 767px) {
             min-width: 200%;
+            }
         }
     }
 }
