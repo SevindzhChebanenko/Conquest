@@ -10,7 +10,9 @@ $ffR: 'Roboto', sans-serif;
 $fs12: 12px;
 $fs14: 14px;
 $fs16: 16px;
+$fs25: 20px;
 $fs32: 32px;
+$fs40: 40px;
 
 $cgr: #555248;
 $ctext: #1B1A17;
@@ -32,6 +34,7 @@ $fw700: 700;
     font-size: $fs12;   
     letter-spacing: 0.14em;
 }
+
 %btn {
     max-width: 205px;
     max-height: 64px;
@@ -55,7 +58,7 @@ $fw700: 700;
 /* Container */
 
 .main {
-    min-width: 1105px;
+    min-width: 1171px;
     font-family: $ffR;
     .container {
         max-width: 1171px;
@@ -67,7 +70,7 @@ $fw700: 700;
 }
 
 
-//Header
+/* Header */
 
 .header__content {
     max-height: 807px;
@@ -78,7 +81,12 @@ $fw700: 700;
     background-repeat: no-repeat;
 
     @media (max-width: 1200px) {
-        min-height: 807px;
+        padding-top: 13px;
+        background-size: 373px 639px;
+        background-position: 415px -10px;
+    }
+    @media (max-width: 767px) {
+        background: none;
     }
 }
 
@@ -87,10 +95,13 @@ $fw700: 700;
     justify-content: space-between;
 
     @media (max-width: 1200px) {
-        justify-content: space-evenly;
+        align-items:center;
+        gap: 131px;
     }
-
-    .header__logo {
+    @media (max-width: 767px) {
+        gap: 30px;
+    }
+        .header__logo {
         display: flex;
         gap: 3px;
         align-items: center;
@@ -98,24 +109,52 @@ $fw700: 700;
             @extend %logo;
             color: $cgr;
             line-height: 16px;
+
+            @media (max-width: 1200px) {
+                font-size: $fs25;
+            }
+            @media (max-width: 767px) {
+                font-size: $fs25;
+            }
+        }
+        .header__image img {
+            @media (max-width: 1200px) {
+                min-width: 50px;
+            }
         }
     }
     .header__menu {
         display: flex;
         gap: 65px;
+
+        @media (max-width: 767px) {
+            gap: 60px;
+        }
+
         .header__menu-elem {
             line-height: 16px;
         }
+        @media (max-width: 1200px) {
+            font-size: $fs25;
+        }
+        @media (max-width: 767px) {
+            font-size: $fs32;
+        }
         & a {
             color: $cgr;
-        }
+            }
         }
     .header__icons {
         display: flex;
         gap: 23px;
-
-        .header__icon{
+        .header__icon {
             position: relative;
+
+        & a img {
+            @media (max-width: 767px) {
+                width: 40px;
+            }
+        }
         
             .heart {
                 padding: 2px 4px;
@@ -128,6 +167,14 @@ $fw700: 700;
                 top: -4px;
                 left: 16px;
 
+                @media (max-width: 767px) {
+                    padding: 3px 7px;
+                    min-width: 20px;
+                    min-height: 20px;
+                    left: 26px;
+                    font-size: 12px;
+                }
+
             }
         }
     }
@@ -139,30 +186,29 @@ $fw700: 700;
         margin-left: 86px;
 
         @media (max-width: 1200px) {
-            margin-left: 100px;
+            margin-left: 128px;
+            min-width: 350px;
         }
 
         .header__description_title {
             margin: 267px 0 16px -62px;
             font-family: $ffPD;
-            font-size: 45px;
+            font-size: $fs40;
             line-height: 60px;
             color: $ctext;
             
             @media (max-width: 1200px) {
-                font-size: 30px;
-                line-height: 20px;
+                margin: 190px 0 16px 0;
             }
-            @media (max-width: 992px) {
-                margin: 266px 0 16px 0px;
-                font-size: 25px;
-                line-height: 15px;
+            @media (max-width: 767px) {
+                margin: 190px 0 36px 0;
+                font-size: 80px;
             }
         }
         & img {
             vertical-align: middle;
 
-            @media (max-width: 992px) {
+            @media (max-width: 1200px) {
                 display: none;
             }
 
@@ -175,23 +221,29 @@ $fw700: 700;
             color: $ctext;
 
             @media (max-width: 1200px) {
-                font-size: 20px;
+                font-size: $fs25;
                 line-height: 30px;
             }
-            @media (max-width: 992px) {
-                font-size: 15px;
-                line-height: 20px;
+
+            @media (max-width: 767px) {
+                font-size: $fs40;
             }
         }
         .header__description_text {
             padding-bottom: 58px;
             font-weight: 300;
-            font-size: 14px;
+            font-size: $fs14;
             line-height: 21px;
             color:$crgba;
 
             @media (max-width: 1200px) {
             padding-bottom: 38px;
+            font-size: $fs16;
+            }
+
+            @media (max-width: 767px) {
+                font-size: $fs25;
+                line-height: 31px;
             }
         }
         .header__description_btn {
@@ -200,6 +252,13 @@ $fw700: 700;
         }
         .btn {
             @extend %btn;
+
+            @media (max-width: 767px) {
+                font-size: $fs25;
+                max-width: 355px;
+                max-height: 214px;
+                padding: 27px 38px;
+            }
             }
     }
     .header__cover {
@@ -212,7 +271,8 @@ $fw700: 700;
                 left: 132px;
 
                 @media (max-width: 1200px) {
-                    left: 155px;
+                    left: 83px;
+                    max-height: 600px;
                 }
                 @media (max-width: 992px) {
                     line-height: 250px;
@@ -225,9 +285,11 @@ $fw700: 700;
             padding: 169px 0 0 57px;
 
             @media (max-width: 1200px) {
-                padding: 169px 0 0 128px;
+                padding: 109px 0 0 50px;
+                font-size: $fs14;
             }
-            @media (max-width: 992px) {
+            @media (max-width: 767px) {
+                font-size: $fs16;
             }
         }
         .cover__footnote-elem2 {
@@ -235,7 +297,12 @@ $fw700: 700;
             padding: 476px 0 0 534px;
 
             @media (max-width: 1200px) {
-                padding: 476px 0 0 510px;
+                font-size: $fs14;
+                padding: 356px 0 0 359px;
+                white-space: pre;
+            }
+            @media (max-width: 767px) {
+                font-size: $fs16;
             }
         }
         & img {
@@ -245,13 +312,16 @@ $fw700: 700;
     }
 }
 
-// Gallery
+/* Gallery */
 
 .gallery__row {
     display: flex;
     flex-direction: column;
     padding-top: 124px;
 
+    @media (max-width: 1200px) {
+        padding-top: 0px;
+    }
 }
 .gallery__title {
     margin: 0 auto;
@@ -259,6 +329,16 @@ $fw700: 700;
     color: $ctext;
     font-size: $fs32;
     line-height: 43px;
+
+    @media (max-width: 1200px) {
+        margin: 0 40%;
+        white-space: pre;
+    }
+    @media (max-width: 767px) {
+        margin: 0 30%;
+        padding-bottom: 30px;
+        font-size: 60px;
+    }
 }
 .gallery__subtitle {
     margin-left: 1067px;
@@ -268,6 +348,11 @@ $fw700: 700;
 
     @media (max-width: 1200px) {
         margin-left: 15px;
+    }
+
+    @media (max-width: 767px) {
+        padding-bottom: 20px;
+        font-size: $fs32;
     }
 
     & a {
@@ -283,10 +368,18 @@ $fw700: 700;
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: 767px) {
+        display: block;
+    }
 }
 .gallery__item {
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 767px) {
+        align-items: center;
+        border-bottom: 1px solid $cbg;
+    }
 }
 .item {
     min-width: 370px;
@@ -300,14 +393,28 @@ $fw700: 700;
     line-height: 24px;
     letter-spacing: 0.03em;
     color: $crgba;
+
+    @media (max-width: 767px) {
+        padding: 40px 0 30px 40px;
+        font-size: $fs32;
+    }
 }
 .item__price {
     padding-left: 40px;
     font-family: $ffP;
     line-height: 16px;
     color: $crgba;
+
+    @media (max-width: 767px) {
+        font-size: $fs25;
+    }
     img {
         max-width: 7.38px;
+
+        @media (max-width: 767px) {
+        max-width: 15px;
+        }
+        
     }
 }
 
@@ -317,9 +424,19 @@ $fw700: 700;
     margin: 0 auto;
     padding-bottom: 20px;
     display: block;
+
+    @media (max-width: 767px) {
+        background: none;
+    }
+
     img{
         max-width: 313px;
         max-height: 313px;
+
+        @media (max-width: 767px) {
+            min-width: 513px;
+            max-height: 513px;
+        }
     }
 }
 .item__subtitle {
@@ -327,6 +444,12 @@ $fw700: 700;
     font-family: $ffPD;
     font-size: $fs16;
     line-height: 21px;
+
+    @media (max-width: 767px) {
+        margin-bottom: 40px;
+        font-size: $fs32;
+    }
+
     img {
     vertical-align: middle;
     }
@@ -336,8 +459,7 @@ $fw700: 700;
     }
 }
 
-//Banner
-
+/* Banner */
 
 .banner__row {
     display: flex;
@@ -350,15 +472,16 @@ $fw700: 700;
     min-width: 698px;
 
     @media (max-width: 1200px) {
-        max-width: 698px;
+        min-width: 587px;
     }
 }
 .banner__image > img {
     padding: 52px 0 53px 177px;
 
     @media (max-width: 1200px) {
+        padding: 52px 0 53px 65px;
+    }
 
-}
 }
 .banner__number {
     margin-top: -32px;
@@ -367,6 +490,12 @@ $fw700: 700;
     color: $crgba;
     font-size: $fs12;
     line-height: 16px;
+
+    @media (max-width: 1200px) {
+        margin-top: -42px;
+        margin-left: 462px;
+        font-size: $fs16;
+    }
 
     img {
         padding: 0 20px;
@@ -380,11 +509,19 @@ $fw700: 700;
         margin: 140px 171px 0 25px;
         min-width: 485px;
     }
+
+    @media (max-width: 767px) {
+        margin: 100px 171px 0 25px;
+        }
     .banner__title {
         font-family: $ffPD;
         font-size: $fs32;
         color: $ctext;
         line-height: 43px;
+
+        @media (max-width: 767px) {
+        font-size: $fs40;
+        }
     }
 
 }
@@ -394,10 +531,22 @@ $fw700: 700;
     font-size: $fs16;
     color: $cbg;
     line-height: 150%;
+
+
+    @media (max-width: 767px) {
+        font-size: $fs25;
+        }
 }
 .btn {
     background: $cbgbtn;
     @extend %btn;
+
+    @media (max-width: 767px) {
+        font-size: 20px;
+        max-width: 355px;
+        max-height: 214px;
+        padding: 27px 38px;
+    }
 
     &:hover {
         opacity: 0.8;
@@ -423,12 +572,24 @@ $fw700: 700;
         font-family: $ffPD;
         font-size: $fs32;
         color: $ctext;
+
+        @media (max-width: 767px) {
+            padding: 70px 71px 40px 0;
+            font-size: $fs40;
+            text-align: center;
+            }
     }
     .news__text {
         padding: 0 164px 119px 0;
         font-size: $fs16;
         color: $cbg;
         line-height: 27px;
+
+        @media (max-width: 767px) {
+            padding: 0 164px 36px 0;
+            font-size: $fs25;
+            text-align: center;
+            }
         & a {
             color: #262421;
             font-weight: $fw500;
@@ -437,6 +598,16 @@ $fw700: 700;
     .news__icons {
         display: flex;
         gap: 18px;
+
+        @media (max-width: 767px) {
+            margin-left: 100px;
+            gap: 80px;
+            align-items: center;
+            }
+
+        & a img {
+            min-width: 200%;
+        }
     }
 }
 
@@ -461,7 +632,12 @@ $fw700: 700;
     padding: 67px 0;
     display: flex;
     justify-content: space-around;
-    // gap: 118px;
+    gap: 118px;
+
+    @media (max-width: 767px) {
+        padding: 47px 0;
+        gap: 30px;
+        }
 }
 
 .footer__logo {
@@ -471,6 +647,10 @@ $fw700: 700;
     @extend %logo;
     gap: 3px;
     font-size: $fs14;
+
+    @media (max-width: 767px) {
+        font-size: $fs25;
+        }
     & img {
         vertical-align: top;
     }
@@ -482,9 +662,17 @@ $fw700: 700;
     margin-bottom: 15px;
     font-size: $fs12;
     color: $ctextf;
+
+    @media (max-width: 767px) {
+        font-size: $fs25;
+        }
 }
 .footer__mail {
     font-size: $fs12;
+
+    @media (max-width: 767px) {
+        font-size: $fs25;
+        }
 
     & a {
         color: $ctextf;
@@ -497,6 +685,10 @@ $fw700: 700;
     color: $cfff;
     line-height: 16px;
     letter-spacing: 0.07em;
+
+    @media (max-width: 767px) {
+        font-size: $fs25;
+        }
 
     & li:first-child{
         padding-top: 33px;
@@ -511,6 +703,10 @@ $fw700: 700;
         font-weight: 400;
         line-height: 14px;
         letter-spacing: normal;
+
+        @media (max-width: 767px) {
+            font-size: $fs25;
+            }
 
         & a {
         color: $ctextf;
