@@ -372,6 +372,7 @@ $fw700: 700;
 }
 .banner__description {
     margin: 140px 171px 0 69px;
+    min-width: 376px;
 
     @media (max-width: 1200px) {
         margin: 140px 171px 0 25px;
