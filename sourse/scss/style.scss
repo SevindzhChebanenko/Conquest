@@ -137,7 +137,6 @@ $fw700: 700;
     display: flex;
     .header__description {
         margin-left: 86px;
-        min-width: 376px;
 
         @media (max-width: 1200px) {
             margin-left: 100px;
@@ -353,11 +352,13 @@ $fw700: 700;
     @media (max-width: 1200px) {
         max-width: 698px;
     }
+}
 .banner__image > img {
     padding: 52px 0 53px 177px;
 
     @media (max-width: 1200px) {
 
+}
 }
 .banner__number {
     margin-top: -32px;
