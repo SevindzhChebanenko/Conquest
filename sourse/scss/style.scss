@@ -137,6 +137,7 @@ $fw700: 700;
     display: flex;
     .header__description {
         margin-left: 86px;
+        min-width: 376px;
 
         @media (max-width: 1200px) {
             margin-left: 100px;
